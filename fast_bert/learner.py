@@ -321,7 +321,7 @@ class BertLearner(object):
         
         t_total = num_train_steps
         if self.multi_gpu == False:
-            t_total = t_total // torch.distributed.get_world_size()
+            t_total = t_total #// torch.distributed.get_world_size()
             
         global_step = 0
         
